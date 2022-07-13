@@ -10,7 +10,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component
-@Import(value = {HelloWorldConfig.class})
+//@Import(value = {HelloWorldConfig.class}) // 注解的方式来实现
+@Import(value = {HelloWorldSelector.class}) // 接口的方式实现
 public @interface EnableHelloWorld {
     String value() default "";
 }

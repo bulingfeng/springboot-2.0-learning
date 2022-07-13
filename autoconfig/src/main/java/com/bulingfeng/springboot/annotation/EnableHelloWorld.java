@@ -1,4 +1,4 @@
-package com.bulingfeng.springboot.enable;
+package com.bulingfeng.springboot.annotation;
 
 import com.bulingfeng.springboot.config.HelloWorldConfig;
 import org.springframework.context.annotation.Import;

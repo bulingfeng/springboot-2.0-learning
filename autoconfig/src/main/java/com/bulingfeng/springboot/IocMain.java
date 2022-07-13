@@ -1,6 +1,5 @@
 package com.bulingfeng.springboot;
 
-import com.bulingfeng.springboot.enable.EnableHelloWorld;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;

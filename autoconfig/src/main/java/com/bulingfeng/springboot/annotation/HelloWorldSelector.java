@@ -10,6 +10,7 @@ import org.springframework.core.type.AnnotationMetadata;
 public class HelloWorldSelector implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
+        // 数组中的内容为你想要注入到容器中的bean
         return new String[]{HelloWorldConfig.class.getName()};
     }
 }

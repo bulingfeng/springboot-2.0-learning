@@ -13,9 +13,14 @@ public class InterfaceApplication {
                 .web(WebApplicationType.NONE)
                 .run(args);
 
+        // 验证HelloWorldConfig是否注入成功
+        HelloWorldConfig helloWorldConfig =
+                applicationContext.getBean(HelloWorldConfig.class);
+        System.out.println("HelloWorldConfig:"+ helloWorldConfig);
         // 进行查找对应的bean
         String beanName = applicationContext.getBean("beanName", String.class);
         System.out.println("bean:"+beanName);
+
 
         // 关闭上下文
         applicationContext.close();

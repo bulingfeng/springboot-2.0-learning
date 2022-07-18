@@ -16,6 +16,7 @@ public class OnSystemPropertyCondition implements Condition {
         String name=String.valueOf(annotationAttributes.get("name"));
         String value=String.valueOf(annotationAttributes.get("value"));
         String systemValue=System.getProperty(name);
+        // 当返回true的时候才会把 使用该注解的bean加载到spring容器当中
         return value.equals(systemValue);
     }
 }

@@ -20,7 +20,7 @@ public class EnableAutoConfigManualApplication {
         String beanName = applicationContext.getBean("beanName", String.class);
         System.out.println("beanName:"+beanName);
 
-
+        // 这里来检验 是否自动装配成功
         HelloWorldAutoConfig config = applicationContext.getBean(HelloWorldAutoConfig.class);
         System.out.println(config);
     }

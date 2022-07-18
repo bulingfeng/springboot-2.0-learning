@@ -6,6 +6,9 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * 基于配置形式的方式来实现自动装配
+ */
 @ComponentScan("com.bulingfeng.springboot.service")
 public class CalculateApplication {
     public static void main(String[] args) {

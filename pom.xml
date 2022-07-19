@@ -11,6 +11,7 @@
     <modules>
         <module>autoconfig</module>
         <module>common</module>
+        <module>spring-application</module>
     </modules>
 
     <dependencies>

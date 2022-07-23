@@ -19,6 +19,7 @@
         <module>common</module>
         <module>spring-application</module>
         <module>spring-web-mvc</module>
+        <module>spring-rest</module>
     </modules>
 
 

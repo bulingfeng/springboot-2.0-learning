@@ -9,10 +9,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.charset.Charset;
 import java.util.List;
@@ -31,7 +28,9 @@ public class HttpPropertiesConvert  extends AbstractGenericHttpMessageConverter<
 
     @Override
     protected void writeInternal(Properties properties, Type type, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException {
-
+        Writer writer=new OutputStreamWriter(outputMessage.getBody());
+        Charset charset = outputMessage.getHeaders().getContentType().getCharset();
+        properties.store(writer,"manual properties");
     }
 
     //把浏览器的读内容

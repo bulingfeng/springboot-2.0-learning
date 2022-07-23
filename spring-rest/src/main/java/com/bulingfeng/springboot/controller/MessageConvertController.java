@@ -13,7 +13,7 @@ public class MessageConvertController {
     @PostMapping(value = "/message",
         consumes = "text/properties;charset=UTF-8"
     )
-    public String testProperties(@RequestBody Properties person){
-        return "success";
+    public Properties testProperties(@RequestBody Properties person){
+        return person;
     }
 }

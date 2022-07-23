@@ -12,6 +12,7 @@ import java.util.Properties;
 public class RestMvcConfig implements WebMvcConfigurer {
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-        converters.add(new HttpPropertiesConvert());
+        //这里建议把消息转换类型放到第一位，否则可能出现不生效
+        converters.add(0,new HttpPropertiesConvert());
     }
 }
